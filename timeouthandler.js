@@ -1,5 +1,5 @@
 const whitelist = [
-  "6285249974145@s.whatsapp.net" // Ganti dengan nomor admin
+  "62xxxxx@s.whatsapp.net" // whitelist here
 ];
 
 const timeoutList = new Map(); // Map<group:user, timestamp>
