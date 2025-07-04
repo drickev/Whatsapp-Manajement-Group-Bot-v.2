@@ -2,39 +2,17 @@
 
 const triggerWords = [
     // Versi awal milikmu
-    "kntl", "kontol", "kntol", "kontl", "komtol", "puqi", "puki",
-    "slot", "gacor", "memek", "mmk", "mmek", "babi", "pepek", "ppk", "ppek",
-    "gay", "jomok", "ngntd", "ngntod", "ngentd", "ngentod", "ngewe",
-    "ewe", "ngew", "ngw", "ewee", "eewe", "eewee", "bokep", "bokp", "bkep", "bkp",
-    "squirt", "cum", "ambatukam", "tytyd", "titid", "jav", "hentai", "cabul", "bool",
-    "bab1", "b4bi", "b4b1", "pekob", "kont", "ngento", "ngentoy", "cukimay", "cuki",
-
-    // Tambahan Bahasa Indonesia & gaul
-    "sange", "sangean", "colmek", "masturbasi", "ngocok", "colie", "coli",
-    "ngentot", "jilmek", "hisap", "titit", "totong", "crot", "kocokan", "dientot",
-    "ngulum", "titid", "zakar", "peler", "ewean", "pelacur", "lonte", "germo", "sundal",
-    "bencong", "banci", "transpuan", "klaminan", "jembut", "buluk", "vulva", "kelamin",
-
-    // Bahasa Inggris (vulgar/slang)
-    "fuck", "fucked", "fucker", "fucking", "shit", "dick", "dildo", "pussy",
-    "boobs", "tits", "tit", "cumshot", "asshole", "bitch", "whore", "slut", "horny",
-    "jerkoff", "masturbate", "suck", "cock", "blowjob", "handjob", "69ing", "licking",
-    "penetration", "anal", "vagina", "penis", "erotic", "porno", "pornhub", "milf",
-
-    // Bahasa daerah / campuran populer
-    "maksiat", "syahwat", "ngaceng", "mesum", "syur", "basah", "kenthu", "tusu", "diemong",
-    "nyepong", "berahi", "birahi", "kocok", "sarap", "bercinta", "pelukan", "cumbuan", "ngangkang"
+  "add_your_forbidde_word"
 ];
 
 const extraVariations = [
-    "anjng", "anjjj", "kontl", "komtol", "toool", "gblak", "slt", "mpek",
-    "b3bi", "pukii", "pukiii"
+    "add_your_forbidde_word"
 ];
 
 const allTriggerWords = [...triggerWords, ...extraVariations];
 
 const whitelistNumbers = [
-    "6285249974145@s.whatsapp.net",
+    "62xxxxxx@s.whatsapp.net", // whitelist
 ];
 
 // Versi baru fungsi buildFlexibleRegex
@@ -59,7 +37,7 @@ function reverseWord(word) {
 }
 
 const safeWords = [
-    "mengayomi", "pengayoman", "gayeng", "mengumpulkan"
+    "exception"
 ];
 
 // ✅ Fungsi utama
