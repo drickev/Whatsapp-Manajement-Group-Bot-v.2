@@ -3,11 +3,9 @@
 
 
 # Required
-
 Node.js v.22 or latest
 Git Bash
 
-
-install dependencies
+# install dependencies
 npm install @whiskeysockets/baileys qrcode-terminal axios cheerio
 
