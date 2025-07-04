@@ -1,8 +1,8 @@
 const fs = require("fs");
 const path = require("path");
 
-const dataPath = path.join(__dirname, "../../data/roles.json");
-const cooldownPath = path.join(__dirname, "../../data/cooldown.json");
+const dataPath = path.join(__dirname, "./roles.json");
+const cooldownPath = path.join(__dirname, "./cooldown.json");
 const COOLDOWN_DURATION = 1200 * 1000; // durasi cooldown dalam ms (contoh: 60 detik)
 
 function loadRoles() {
@@ -35,7 +35,7 @@ module.exports = {
     // ADD ROLE
     if (lower.startsWith("addrole")) {
       const mentions = msg.message?.extendedTextMessage?.contextInfo?.mentionedJid || [];
-      const role = lower.includes("wf") ? "wf" : lower.includes("ops") ? "ops" : null;
+      const role = lower.includes("yourrole") ? "yourrole" : lower.includes("yourrole") ? "yourrole" : null;
       if (!role) return;
 
       const targetIds = mentions.length > 0 ? mentions : [sender];
@@ -59,7 +59,7 @@ module.exports = {
     // REMOVE ROLE
     if (lower.startsWith("removerole")) {
       const mentions = msg.message?.extendedTextMessage?.contextInfo?.mentionedJid || [];
-      const role = lower.includes("wf") ? "wf" : lower.includes("ops") ? "ops" : null;
+      const role = lower.includes("yourrole") ? "yourrole" : lower.includes("yourrole") ? "yourrole" : null;
       if (!role) return;
 
       const targetIds = mentions.length > 0 ? mentions : [sender];
@@ -92,7 +92,7 @@ module.exports = {
 
     // COUNT ROLE
     if (lower.startsWith("rolecount")) {
-      const role = lower.includes("wf") ? "wf" : lower.includes("ops") ? "ops" : null;
+      const role = lower.includes("yourrole") ? "yourrole" : lower.includes("yourrole") ? "yourrole" : null;
       if (!role) return;
 
       const roles = loadRoles();
