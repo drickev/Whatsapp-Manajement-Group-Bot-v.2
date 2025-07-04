@@ -3,12 +3,12 @@ const qrcode = require("qrcode-terminal");
 const fs = require("fs");
 
 // Handlers
-const welcomeHandler = require("./handlers/welcome/welcome");
-const linkFilter = require("./handlers/linkfilter/linkfilter");
-const { handleTimeoutCommand, handleReleaseCommand, checkAndBlockTimedOutUser } = require("./handlers/timeout/timeouthandler");
-const { assignToRole, handleTagRole } = require("./handlers/roles/rolehandler");
-//const tagall = require("./handlers/tagall/tagall")
-//const autoResponder = require('./handlers/autoResponder/autoResponder')
+const welcomeHandler = require("./welcome"); 
+const linkFilter = require("./linkfilter");
+const { handleTimeoutCommand, handleReleaseCommand, checkAndBlockTimedOutUser } = require(".timeouthandler");
+const { assignToRole, handleTagRole } = require(".rolehandler");
+const tagall = require("./tagall")
+const autoResponder = require('.autoResponder')
 
 async function startBot() {
   const { state, saveCreds } = await useMultiFileAuthState("auth");
@@ -27,13 +27,13 @@ async function startBot() {
     if (!msg.message || msg.key.fromMe) return;
 
     await checkAndBlockTimedOutUser(sock, msg);
-    //await tagall(sock, msg);
+    await tagall(sock, msg);
     await linkFilter(sock, msg);
     await handleTimeoutCommand(sock, msg);
     await handleReleaseCommand(sock, msg);
     await assignToRole(sock, msg);
     await handleTagRole(sock, msg);
-    //await autoResponder(sock, msg);
+    await autoResponder(sock, msg);
     
   });
 }
