@@ -7,17 +7,10 @@ module.exports = async function welcomeHandler(sock, update) {
       for (const participant of update.participants) {
         const name = participant.split("@")[0];
         const caption = 
-`👋 Selamat bergabung di *ALTER UNION!* @${name}
-
-1. 📜 Patuhi Rules Grup
-2. 🎮 Join Server Resmi Clan
-3. 🤝 Jaga Tatakrama
-4. 🔗 Join Server Resmi AU https://discord.gg/dCpGaXakm8
-
-✨ *SEMOGA BETAH!* ✨`;
+`custom message* @${name}`;
 
         await sock.sendMessage(update.id, {
-          image: fs.readFileSync("./banner.jpg"), // Bisa juga .jpg atau .png
+          image: fs.readFileSync("./filename.fileformat"), // Bisa juga .jpg atau .png
           caption: caption,
           mentions: [participant]
         });
