@@ -1,14 +1,9 @@
 const allowedLinks = [
-  "https://discord.gg/dCpGaXakm8",
-  "youtube.com",
-  "tiktok.com/@alterunion",
-  "instagram.com",
-  "@gmail.com"
+// allowed link here
 ];
 
-// ✅ Daftar nomor whitelist (format ID WhatsApp)
 const whitelistNumbers = [
-  "6285249974145@s.whatsapp.net" // Admin atau member yang diperbolehkan
+  "62xxxxxx@s.whatsapp.net" // whitelist here
 ];
 
 const isWhitelisted = (text) => {
